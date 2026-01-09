@@ -1,0 +1,68 @@
+{
+  "name": "n8n-nodes-tapsilat",
+  "version": "1.0.0",
+  "description": "n8n community node for Tapsilat Payment Processing Platform",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "tapsilat",
+    "payment",
+    "payment-gateway",
+    "fintech",
+    "turkey"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tapsilat/tapsilat-n8n-node",
+  "author": {
+    "name": "Tapsilat",
+    "email": "info@tapsilat.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tapsilat/tapsilat-n8n-node.git"
+  },
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=9.1"
+  },
+  "packageManager": "pnpm@9.1.4",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/TapsilatApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Tapsilat/Tapsilat.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^4.0.2",
+    "n8n-workflow": "*",
+    "prettier": "^3.2.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@tapsilat/tapsilat-js": "^2025.12.19"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
