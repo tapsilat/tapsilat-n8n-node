@@ -60,7 +60,7 @@
     "typescript": "^5.3.0"
   },
   "dependencies": {
-    "@tapsilat/tapsilat-js": "^2025.12.19"
+    "@tapsilat/tapsilat-js": "^v2026.01.14"
   },
   "peerDependencies": {
     "n8n-workflow": "*"

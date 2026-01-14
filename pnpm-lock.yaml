@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@tapsilat/tapsilat-js':
-        specifier: ^2025.12.19
-        version: 2025.12.19
+        specifier: ^v2026.01.14
+        version: 2026.1.14
     devDependencies:
       '@types/node':
         specifier: ^20.10.0
@@ -92,8 +92,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@tapsilat/tapsilat-js@2025.12.19':
-    resolution: {integrity: sha512-B8fnuuz+Rizc8Sz1448gRuAp21AHZd0qh/jv5ENjYv/hNu0yRnpLuwG7eRXwJLLhPspD6IOBaXzRVG+FytjryA==}
+  '@tapsilat/tapsilat-js@2026.1.14':
+    resolution: {integrity: sha512-/6RAVgET19wtzm7wMIy8qAkTlnq9Ce5M+PLukfAsHGlNSW31m2rd6mDUy5srqO3pHg48qi1GKCCPhMQlMlldkQ==}
     engines: {node: '>=18.0.0'}
 
   '@types/json-schema@7.0.15':
@@ -2011,7 +2011,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
 
-  '@tapsilat/tapsilat-js@2025.12.19': {}
+  '@tapsilat/tapsilat-js@2026.1.14': {}
 
   '@types/json-schema@7.0.15': {}
 
