@@ -122,13 +122,13 @@ In n8n:
 git clone https://github.com/tapsilat/tapsilat-n8n-node.git
 
 # Install dependencies
-npm install
+pnpm install
 
 # Build
-npm run build
+pnpm run build
 
 # Link for local testing
-npm link
+pnpm link
 ```
 
 ## Resources
