@@ -26,5 +26,8 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
-      - run: pnpm test
+      - name: Run tests (clean logs)
+        run: |
+          set -o pipefail
+          pnpm test 2>&1 | awk '!/Sourcemap for ".*" points to missing source files/'
       - run: npm publish --provenance

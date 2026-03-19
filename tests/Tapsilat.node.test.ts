@@ -1,11 +1,16 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-const createOrderMock = vi.fn();
+const { createOrderMock, TapsilatSDKMock } = vi.hoisted(() => {
+	const createOrderMock = vi.fn();
+	const TapsilatSDKMock = vi.fn(function TapsilatSDKMock(this: { createOrder: typeof createOrderMock }) {
+		this.createOrder = createOrderMock;
+	});
+
+	return { createOrderMock, TapsilatSDKMock };
+});
 
 vi.mock('@tapsilat/tapsilat-js', () => ({
-	TapsilatSDK: vi.fn().mockImplementation(() => ({
-		createOrder: createOrderMock,
-	})),
+	TapsilatSDK: TapsilatSDKMock,
 }));
 
 import { Tapsilat } from '../nodes/Tapsilat/Tapsilat.node';
@@ -57,6 +62,8 @@ function createMockExecuteContext(
 describe('Tapsilat node execute', () => {
 	beforeEach(() => {
 		vi.clearAllMocks();
+		createOrderMock.mockReset();
+		TapsilatSDKMock.mockClear();
 	});
 
 	it('creates an order and maps additional fields correctly', async () => {
