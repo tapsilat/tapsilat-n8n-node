@@ -127,6 +127,9 @@ pnpm install
 # Build
 pnpm run build
 
+# Run tests
+pnpm test
+
 # Link for local testing
 pnpm link
 ```

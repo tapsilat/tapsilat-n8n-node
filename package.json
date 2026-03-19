@@ -34,7 +34,9 @@
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials",
     "lintfix": "eslint nodes credentials --fix",
-    "prepublishOnly": "pnpm build && pnpm lint"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm build && pnpm lint && pnpm test"
   },
   "files": [
     "dist"
@@ -58,7 +60,8 @@
     "gulp": "^5.0.1",
     "n8n-workflow": "^2.13.0",
     "prettier": "^3.8.1",
-    "typescript": "~5.9.3"
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@tapsilat/tapsilat-js": "^2026.1.14"
