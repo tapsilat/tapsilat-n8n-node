@@ -35,7 +35,7 @@ importers:
         version: 5.0.1
       n8n-workflow:
         specifier: ^2.13.0
-        version: 2.13.0
+        version: 2.14.1
       prettier:
         specifier: ^3.8.1
         version: 3.8.1
@@ -273,8 +273,8 @@ packages:
   '@n8n/errors@0.6.0':
     resolution: {integrity: sha512-oVJ0lgRYJY6/aPOW2h37ea5T+nX7/wULRn5FymwYeaiYlsLdqwIQEtGwZrajpzxJB0Os74u4lSH3WWQgZCkgxQ==}
 
-  '@n8n/expression-runtime@0.5.0':
-    resolution: {integrity: sha512-DqkF79FyuljdjlSz1i6PfbrQ47w5U/fIqjoyAbRVxr+YatiM3RAe0zhfQ1ur1lV5QTq0BHnY8zsfFQ+DIItPhA==}
+  '@n8n/expression-runtime@0.6.0':
+    resolution: {integrity: sha512-oHoqBqkKFP2YL6F1Jk4afl/q9+nW2tQ2dWCzSRjn+cIReq6ByGRQ+eBWst+/GXzrNDbJdsk53+PFk2lZADHN6g==}
 
   '@n8n/tournament@1.0.6':
     resolution: {integrity: sha512-UGSxYXXVuOX0yL6HTLBStKYwLIa0+JmRKiSZSCMcM2s2Wax984KWT6XIA1TR/27i7yYpDk1MY14KsTPnuEp27A==}
@@ -1243,8 +1243,8 @@ packages:
     resolution: {integrity: sha512-32GSKM3Wyc8dg/p39lWPKYu8zci9mJFzV1Np9Of0ZEpe6Fhssn/FbI7ywAMd40uX+p3ZKh3T5EeCFv81qS3HmQ==}
     engines: {node: '>= 10.13.0'}
 
-  n8n-workflow@2.13.0:
-    resolution: {integrity: sha512-fYLyYDlenGlzNvC+i+xsiFSna7gZVbhhTTb215ygL7JVguJhWy7JqW8szhvxkJMqujP0ejlbJYzPfRVxNyllkQ==}
+  n8n-workflow@2.14.1:
+    resolution: {integrity: sha512-t9IoWxXtf2E6789qAbUUmYImpb/KufsQGbkxAGuifIQZSIbaWuVTktSiiIjGHZgwTwQ8XNWu3Je15NBK/S9EJw==}
 
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
@@ -1346,6 +1346,10 @@ packages:
   picomatch@2.3.2:
     resolution: {integrity: sha512-V7+vQEJ06Z+c5tSye8S+nHUfI51xoXIXjHQ99cQtKUkQqqO1kO/KCJUfZXuB47h/YBlDhah2H3hdUGXn8ie0oA==}
     engines: {node: '>=8.6'}
+
+  picomatch@4.0.4:
+    resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
+    engines: {node: '>=12'}
 
   picomatch@4.0.4:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
@@ -1909,7 +1913,7 @@ snapshots:
     dependencies:
       callsites: 3.1.0
 
-  '@n8n/expression-runtime@0.5.0':
+  '@n8n/expression-runtime@0.6.0':
     dependencies:
       '@n8n/tournament': 1.0.6
       isolated-vm: 6.1.2
@@ -2554,6 +2558,10 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.4
 
+  fdir@6.5.0(picomatch@4.0.4):
+    optionalDependencies:
+      picomatch: 4.0.4
+
   file-entry-cache@8.0.0:
     dependencies:
       flat-cache: 4.0.1
@@ -2924,10 +2932,10 @@ snapshots:
 
   mute-stdout@2.0.0: {}
 
-  n8n-workflow@2.13.0:
+  n8n-workflow@2.14.1:
     dependencies:
       '@n8n/errors': 0.6.0
-      '@n8n/expression-runtime': 0.5.0
+      '@n8n/expression-runtime': 0.6.0
       '@n8n/tournament': 1.0.6
       ast-types: 0.16.1
       callsites: 3.1.0
@@ -3044,6 +3052,8 @@ snapshots:
   picocolors@1.1.1: {}
 
   picomatch@2.3.2: {}
+
+  picomatch@4.0.4: {}
 
   picomatch@4.0.4: {}
 
